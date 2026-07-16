@@ -10,6 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --font-main: var(--font-main);
+  --font-support1: var(--font-support1);
+  --font-support2: var(--font-support2);
+
+  --color-default-teal: #023334;
+  --color-default-mustard: #d5ab05;
+  --color-default-navy: #222b56;
+  --color-default-rust: #9e3f22;
+  --color-default-ivory: #f9efe8;
 }
 
 @media (prefers-color-scheme: dark) {
