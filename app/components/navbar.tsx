@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const BANNER_HEIGHT = 96;
 
-export default function LogoBanner() {
+export default function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
@@ -28,7 +28,15 @@ export default function LogoBanner() {
       <div className="absolute inset-0 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black,transparent)] transition-opacity duration-300 group-hover:opacity-0" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       <div className="absolute inset-0 bg-default-navy opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      <div className="relative flex h-full w-full items-center justify-center">
+      <div className="relative flex h-full w-full items-center justify-center px-6">
+        <nav className="absolute left-6 flex items-center gap-6 font-support2 text-base font-bold text-default-ivory">
+          <span aria-disabled="true" className="cursor-pointer hover:underline">
+            About
+          </span>
+          <a href="#contact" className="hover:underline">
+            Contact
+          </a>
+        </nav>
         <Image
           src="/logos/V2/LOGO SECUNDATRIO SIN FONDO.png"
           alt="Excellentia Foods"

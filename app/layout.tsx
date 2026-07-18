@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/app/components/footer";
-import LogoBanner from "@/app/components/logo-banner";
+import Navbar from "@/app/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,16 +31,18 @@ const fontSupport2 = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Excellentia Foods LLC | Premium Cheeses & Deli Meats",
+  title: "Excellentia Foods LLC | Hispanic Cheeses & Cold Cuts distributor ",
   description:
-    "Excellentia Foods LLC offers premium quality cheeses, sausages, deli meats, and specialty food products across the USA.",
+    "Fastest delivery in Southern California, providing the freshest and most authentic Hispanic foods with full service inventory management.",
   keywords: [
-    "Excellentia Foods",
-    "premium cheese",
-    "deli meats",
-    "sausages",
-    "specialty foods",
-    "food distributor USA",
+    "Hispanic food distributor",
+    "bulk Mexican cheese supplier",
+    "wholesale deli meats",
+    "refrigerated shelf stocking food distributor",
+    "bulk Queso Fresco and Cotija cheese",
+    "FIFO inventory management food supplier",
+    "Hispanic food wholesale catalog",
+    "Hispanic grocery store supplier",
   ],
   robots: "index, follow",
   alternates: {
@@ -60,10 +62,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fontMain.variable} ${fontSupport1.variable} ${fontSupport2.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${fontMain.variable} ${fontSupport1.variable} ${fontSupport2.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex h-screen flex-col overflow-y-auto bg-white">
-        <LogoBanner />
+      <body className="flex min-h-screen flex-col bg-white">
+        <Navbar />
         <div className="flex flex-1 flex-col bg-white">{children}</div>
         <Footer />
       </body>

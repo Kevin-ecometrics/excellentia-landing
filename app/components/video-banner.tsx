@@ -1,6 +1,6 @@
 export default function VideoBanner() {
   return (
-    <section className="relative flex h-[50vh] w-full items-center overflow-hidden bg-default-teal px-6 sm:h-[40vh]">
+    <section className="relative flex h-[50vh] w-full items-end overflow-hidden bg-default-teal px-6 pb-10 sm:h-[40vh] sm:items-center sm:pb-0">
       {/* Background video placeholder — swap this section's bg-default-rust
           for an absolutely positioned <video> once the asset is available. */}
       <div className="relative max-w-lg text-left text-white">

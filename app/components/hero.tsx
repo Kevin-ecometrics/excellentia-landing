@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative flex h-[50vh] w-full items-end justify-start overflow-hidden bg-default-rust px-6 pb-10 sm:h-[60vh] sm:pb-14 lg:h-[70vh] lg:pb-16">
+    <section className="relative flex h-[60vh] w-full items-end justify-start overflow-hidden bg-default-rust px-6 pb-10 sm:pb-14 lg:h-[70vh] lg:pb-16">
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/40 to-transparent" />
       <div className="relative max-w-2xl">
         <h1 className="font-main text-2xl text-default-ivory sm:text-3xl lg:text-4xl">
@@ -16,7 +16,7 @@ export default function Hero() {
           href="#contact"
           className="mt-6 inline-flex items-center gap-2 font-support2 text-default-ivory transition-all hover:gap-3"
         >
-          Request Wholesale Catalog & Price List
+          Join Today
           <span aria-hidden="true">→</span>
         </a>
       </div>

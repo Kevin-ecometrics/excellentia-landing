@@ -77,9 +77,9 @@ export default function BenefitsBanner() {
             <h3 className="mt-6 text-2xl font-main tracking-wide md:text-3xl">
               {benefit.title}
             </h3>
-            <p className="mt-3 font-support2 text-base text-white/70">
+            {/* <p className="mt-3 font-support2 text-base text-white/70">
               {benefit.subtitle}
-            </p>
+            </p> */}
           </div>
         ))}
       </div>

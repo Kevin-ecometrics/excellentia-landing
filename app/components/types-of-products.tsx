@@ -12,21 +12,22 @@ type Product = {
 
 const products: Product[] = [
   {
-    name: "Reynaldo's Premium Cured Pork Longaniza Sausage",
+    name: "Cheese",
     image:
-      "/products/Reynaldos premium pork cured longaniza sausage distributed by excellentia foods.png",
-    video: "/products/Longaniza de puerco.mp4",
+      "/products/Excellentia foods distributes queso fresco from tio francisco.webp",
+    video: "/products/queso fresco.mp4",
   },
   {
-    name: "Excelsior Cotija Cheese",
+    name: "Cold Cuts",
     image:
-      "/products/Excellentia foods distributes excelsior cotija cheese.png",
-    video: "/products/Queso cotija.mp4",
+      "/products/Excellentia foods distributes  reynaldos beef chorizo.png",
+    video: "/products/chorizo.mp4",
   },
   {
-    name: "Juquilita Mole Paste",
-    image: "/products/Excellentia foods distributes juquilita mole paste.webp",
-    video: "/products/Mole video.mp4",
+    name: "More",
+    image:
+      "/products/Excellentia foods distributes  flan napolitano from juan j.webp",
+    video: "/products/Flan.mp4",
   },
 ];
 
@@ -72,7 +73,7 @@ function ProductCard({
         />
       </div>
       <div className="flex flex-1 flex-col justify-center px-6 pt-3 pb-16 text-left transition-colors duration-300 group-hover:bg-default-mustard/30">
-        <p className="font-support2 text-sm font-bold text-default-navy sm:text-base">
+        <p className="font-support2 text-xl text-center font-bold text-default-navy sm:text-4xl">
           {product.name}
         </p>
       </div>
@@ -80,7 +81,7 @@ function ProductCard({
   );
 }
 
-export default function BestSellers() {
+export default function TypesOfProducts() {
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
@@ -120,17 +121,8 @@ export default function BestSellers() {
   };
 
   return (
-    <section className="w-full bg-white pt-16 text-default-navy ">
-      <div className="flex flex-col items-start px-6 font-bold sm:flex-row sm:items-end sm:justify-between">
-        <h2 className="font-support2 text-2xl sm:text-3xl lg:text-4xl">
-          Request Wholesale Catalog & Price List
-        </h2>
-        <p className="mt-6 inline-flex items-center gap-2 font-support2 text-default-navy transition-all hover:cursor-pointer hover:gap-3">
-          See All Products
-          <span aria-hidden="true">→</span>
-        </p>
-      </div>
-      <div ref={viewportRef} className="relative mt-8 overflow-hidden">
+    <section className="w-full bg-white text-default-navy">
+      <div ref={viewportRef} className="relative overflow-hidden">
         <motion.div
           ref={trackRef}
           className="flex cursor-grab active:cursor-grabbing"
