@@ -67,7 +67,7 @@ function FaqRow({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-6 py-6 text-left"
+        className="flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left"
       >
         <span className="font-support2 text-base font-bold sm:text-lg">
           {faq.question}
@@ -109,9 +109,9 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-default-ivory px-6 py-24 text-default-navy">
+    <section className="w-full bg-default-ivory px-6 py-24 text-default-navy sm:px-10 lg:px-16">
       <div className="mx-auto max-w-6xl">
-        <h2 className="font-main text-4xl sm:text-5xl lg:text-6xl">
+        <h2 className="font-support1 text-4xl sm:text-5xl lg:text-6xl">
           Frequently Asked Questions
         </h2>
         <div className="mt-12 divide-y divide-default-navy/20 border-t border-default-navy/20">

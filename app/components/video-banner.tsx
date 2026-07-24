@@ -1,7 +1,7 @@
 export default function VideoBanner() {
   return (
-    <section className="relative flex h-[50vh] w-full items-end overflow-hidden bg-default-teal px-6 pb-10 sm:h-[40vh] sm:items-center sm:pb-0">
-      {/* Background video placeholder — swap this section's bg-default-rust
+    <section className="relative flex h-[50vh] w-full items-end overflow-hidden bg-default-indigo px-6 pb-10 sm:h-[40vh] sm:items-center sm:px-10 sm:pb-0 lg:px-16">
+      {/* Background video placeholder — swap this section's bg-default-indigo
           for an absolutely positioned <video> once the asset is available. */}
       <div className="relative max-w-lg text-left text-white">
         <h2 className="font-support2 text-2xl font-bold sm:text-3xl">

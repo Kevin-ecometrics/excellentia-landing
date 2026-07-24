@@ -131,7 +131,7 @@ export default function NewArrivals() {
           <span aria-hidden="true">→</span>
         </p>
       </div> */}
-      <div ref={viewportRef} className="relative mt-8 overflow-hidden">
+      <div ref={viewportRef} className="relative overflow-hidden">
         <motion.div
           ref={trackRef}
           className="flex cursor-grab active:cursor-grabbing"

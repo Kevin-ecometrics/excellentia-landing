@@ -29,22 +29,39 @@ export default function Navbar() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       <div className="absolute inset-0 bg-default-navy opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       <div className="relative flex h-full w-full items-center justify-center px-6">
-        <nav className="absolute left-6 flex items-center gap-6 font-support2 text-base font-bold text-default-ivory">
+        <nav className="absolute left-6 flex items-center gap-6 font-support2 text-base font-bold text-default-ivory sm:left-10 lg:left-16">
           <span aria-disabled="true" className="cursor-pointer hover:underline">
             About
           </span>
-          <a href="#contact" className="hover:underline">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="hover:underline"
+          >
             Contact
           </a>
         </nav>
-        <Image
-          src="/logos/V2/LOGO SECUNDATRIO SIN FONDO.png"
-          alt="Excellentia Foods"
-          width={1873}
-          height={1661}
-          loading="eager"
-          className="h-12 w-auto"
-        />
+        <a
+          href="/terms-and-conditions"
+          className="absolute right-6 font-support2 text-base font-bold text-default-ivory hover:underline sm:right-10 lg:right-16"
+        >
+          Terms &amp; Conditions
+        </a>
+        <a href="/" aria-label="Excellentia Foods home">
+          <Image
+            src="/logos/V2/LOGO SECUNDATRIO SIN FONDO.png"
+            alt="Excellentia Foods"
+            width={1873}
+            height={1661}
+            loading="eager"
+            className="h-12 w-auto"
+          />
+        </a>
       </div>
     </motion.header>
   );

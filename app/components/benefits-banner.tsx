@@ -66,7 +66,7 @@ const benefits: Benefit[] = [
 
 export default function BenefitsBanner() {
   return (
-    <section className="w-full bg-default-navy px-6 py-24 text-white">
+    <section className="w-full bg-default-navy px-6 py-24 text-white sm:px-10 lg:px-16">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 sm:grid-cols-3 sm:gap-6 md:gap-12 lg:gap-24 xl:gap-36 2xl:gap-48">
         {benefits.map((benefit) => (
           <div
@@ -74,7 +74,7 @@ export default function BenefitsBanner() {
             className="flex flex-col items-center text-center font-main"
           >
             <div className="h-16 w-16 sm:h-20 sm:w-20">{benefit.icon}</div>
-            <h3 className="mt-6 text-2xl font-main tracking-wide md:text-3xl">
+            <h3 className="mt-6 text-2xl font-main uppercase tracking-wide md:text-3xl">
               {benefit.title}
             </h3>
             {/* <p className="mt-3 font-support2 text-base text-white/70">

@@ -121,7 +121,7 @@ export default function BestSellers() {
 
   return (
     <section className="w-full bg-white pt-16 text-default-navy ">
-      <div className="flex flex-col items-start px-6 font-bold sm:flex-row sm:items-end sm:justify-between">
+      <div className="flex flex-col items-start px-6 font-bold sm:flex-row sm:items-end sm:justify-between sm:px-10 lg:px-16">
         <h2 className="font-support2 text-2xl sm:text-3xl lg:text-4xl">
           Request Wholesale Catalog & Price List
         </h2>

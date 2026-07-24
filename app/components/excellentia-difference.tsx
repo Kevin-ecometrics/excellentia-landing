@@ -42,8 +42,8 @@ export default function ExcellentiaDifference() {
   const [header, ...body] = rows;
 
   return (
-    <section className="w-full bg-default-rust px-6 py-24 text-center text-white">
-      <h2 className="font-main text-4xl sm:text-5xl lg:text-6xl text-default-mustard">
+    <section className="w-full bg-default-teal px-6 py-24 text-center text-white sm:px-10 lg:px-16">
+      <h2 className="font-support1 text-4xl sm:text-5xl lg:text-6xl text-default-mustard">
         The Excellentia Difference
       </h2>
       <p className="mt-4 font-support2 font-bold text-lg sm:text-xl">

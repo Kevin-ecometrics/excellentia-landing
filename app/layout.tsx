@@ -26,7 +26,7 @@ const fontSupport1 = localFont({
 });
 
 const fontSupport2 = localFont({
-  src: "../public/tipografias/FreeSans.otf",
+  src: "../public/tipografias/quirkfy-regular.otf",
   variable: "--font-support2",
 });
 
@@ -64,7 +64,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${fontMain.variable} ${fontSupport1.variable} ${fontSupport2.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-screen flex-col bg-white">
+      <body
+        className="flex min-h-screen flex-col bg-white"
+        suppressHydrationWarning
+      >
         <Navbar />
         <div className="flex flex-1 flex-col bg-white">{children}</div>
         <Footer />
