@@ -68,7 +68,8 @@ export default function Navbar() {
         >
           <Image
             src="/logos/V2/LOGO SECUNDATRIO SIN FONDO.png"
-            alt="Excellentia Foods"
+            alt="Excellentia Foods logo"
+            title="Excellentia Foods – Wholesale Hispanic Food Distributor"
             width={1873}
             height={1661}
             loading="eager"

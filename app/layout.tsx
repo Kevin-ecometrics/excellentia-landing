@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import { siteUrl } from "@/app/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,6 +30,7 @@ const fontSupport2 = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Excellentia Foods LLC | Hispanic Cheeses & Cold Cuts distributor ",
   description:
     "Fastest delivery in Southern California, providing the freshest and most authentic Hispanic foods with full service inventory management.",
@@ -43,9 +45,6 @@ export const metadata: Metadata = {
     "Hispanic grocery store supplier",
   ],
   robots: "index, follow",
-  alternates: {
-    canonical: "https://excellentiafoods.com/",
-  },
   authors: [{ name: "Excellentia Foods LLC" }],
   other: {
     publisher: "Excellentia Foods LLC",

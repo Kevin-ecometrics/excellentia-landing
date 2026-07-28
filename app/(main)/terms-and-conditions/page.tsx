@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import LogoBanner from "@/app/components/logo-banner";
+import { absoluteUrl } from "@/app/site-url";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/terms-and-conditions/"),
+  },
+};
 
 const terms = [
   "Seller retains title to the goods until buyer performs the entire contract and goods have been paid for in full. Seller retains a security interest in the goods, including all additions and replacements, to secure performance of all buyer's obligations under this contract.",

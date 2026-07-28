@@ -165,7 +165,8 @@ export default function Footer() {
       <div className="flex flex-1 items-center justify-center">
         <Image
           src="/logos/LOGO LETRAS EXCELLENTIA.png"
-          alt="Excellentia Foods"
+          alt="Excellentia Foods logo"
+          title="Excellentia Foods – Wholesale Hispanic Food Distributor"
           width={400}
           height={400}
           className="h-auto w-full object-contain max-w-7xl"

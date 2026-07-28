@@ -7,7 +7,8 @@ export default function NotFound() {
       <div className="flex flex-1 flex-col items-center justify-center px-6">
         <Image
           src="/logos/V1/LOGO EXCELLENTIA SIN FONDO.png"
-          alt="Excellentia Foods"
+          alt="Excellentia Foods logo"
+          title="Excellentia Foods – Wholesale Hispanic Food Distributor"
           width={320}
           height={320}
           priority

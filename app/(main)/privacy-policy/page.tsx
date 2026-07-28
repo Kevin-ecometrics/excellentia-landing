@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/app/site-url";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: absoluteUrl("/privacy-policy/"),
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <main className="mx-auto max-w-3xl bg-white px-6 py-16 text-zinc-800 sm:px-10">

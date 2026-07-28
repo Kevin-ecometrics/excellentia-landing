@@ -63,6 +63,7 @@ function ProductCard({
         <Image
           src={product.image}
           alt={product.name}
+          title={`${product.name} – distributed by Excellentia Foods`}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
