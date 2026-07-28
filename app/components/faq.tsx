@@ -26,7 +26,7 @@ const faqs: FaqItem[] = [
     ),
   },
   {
-    question: "What kind of products do Excellentia Foods Offer?",
+    question: "What kind of products does Excellentia Foods Offer?",
     answer: (
       <div className="space-y-3 max-w-5xl">
         <p>
