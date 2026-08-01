@@ -1,4 +1,6 @@
-export default function LegacyBanner() {
+import type { Dictionary } from "@/app/i18n";
+
+export default function LegacyBanner({ dict }: { dict: Dictionary }) {
   return (
     <section className="relative flex w-full items-start justify-start overflow-hidden bg-default-indigo px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
       {/* Background video placeholder — swap this section's bg-default-indigo
@@ -6,13 +8,10 @@ export default function LegacyBanner() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent" />
       <div className="relative max-w-2xl text-left">
         <h2 className="font-support2 text-2xl font-bold text-default-ivory sm:text-3xl">
-          Excellentia Foods is a family-owned business with a decade of growth;
-          with every delivery, we fulfill our promise of excellence, quality,
-          and freshness.
+          {dict.legacyBanner.heading}
         </h2>
         <p className="mt-4 font-support2 text-base text-default-ivory/80">
-          We are committed to providing every customer and the community with
-          products that connect them to their Hispanic roots.
+          {dict.legacyBanner.body}
         </p>
       </div>
     </section>

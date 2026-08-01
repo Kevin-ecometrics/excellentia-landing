@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { animate, motion, useMotionValue, type PanInfo } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import type { Dictionary } from "@/app/i18n";
 
 type Product = {
   name: string;
@@ -10,21 +11,19 @@ type Product = {
   video: string;
 };
 
-const products: Product[] = [
+// Los nombres viven en el diccionario, en el mismo orden que estos assets.
+const media = [
   {
-    name: "Cheese",
     image:
       "/products/Excellentia foods distributes queso fresco from tio francisco.webp",
     video: "/products/queso fresco.mp4",
   },
   {
-    name: "Cold Cuts",
     image:
       "/products/Excellentia foods distributes  reynaldos beef chorizo.png",
     video: "/products/chorizo.mp4",
   },
   {
-    name: "More",
     image:
       "/products/Excellentia foods distributes  flan napolitano from juan j.webp",
     video: "/products/Flan.mp4",
@@ -33,9 +32,11 @@ const products: Product[] = [
 
 function ProductCard({
   product,
+  titleSuffix,
   loading,
 }: {
   product: Product;
+  titleSuffix: string;
   loading: "eager" | "lazy";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -64,7 +65,7 @@ function ProductCard({
         <Image
           src={product.image}
           alt={product.name}
-          title={`${product.name} – distributed by Excellentia Foods`}
+          title={`${product.name} – ${titleSuffix}`}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
@@ -82,7 +83,10 @@ function ProductCard({
   );
 }
 
-export default function TypesOfProducts() {
+export default function TypesOfProducts({ dict }: { dict: Dictionary }) {
+  const products: Product[] = dict.typesOfProducts.products.map(
+    (name, index) => ({ name, ...media[index] }),
+  );
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
@@ -138,6 +142,7 @@ export default function TypesOfProducts() {
             <ProductCard
               key={product.name}
               product={product}
+              titleSuffix={dict.common.productTitleSuffix}
               loading={index === 0 ? "eager" : "lazy"}
             />
           ))}

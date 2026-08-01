@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { animate, motion, useMotionValue, type PanInfo } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import type { Dictionary } from "@/app/i18n";
 
 type Product = {
   name: string;
@@ -10,21 +11,19 @@ type Product = {
   video: string;
 };
 
-const products: Product[] = [
+// Los nombres viven en el diccionario, en el mismo orden que estos assets.
+const media = [
   {
-    name: "Reynaldo's Premium Cured Pork Longaniza Sausage",
     image:
       "/products/Reynaldos premium pork cured longaniza sausage distributed by excellentia foods.png",
     video: "/products/Longaniza de puerco.mp4",
   },
   {
-    name: "Excelsior Cotija Cheese",
     image:
       "/products/Excellentia foods distributes excelsior cotija cheese.png",
     video: "/products/Queso cotija.mp4",
   },
   {
-    name: "Juquilita Mole Paste",
     image: "/products/Excellentia foods distributes juquilita mole paste.webp",
     video: "/products/Mole video.mp4",
   },
@@ -32,9 +31,11 @@ const products: Product[] = [
 
 function ProductCard({
   product,
+  titleSuffix,
   loading,
 }: {
   product: Product;
+  titleSuffix: string;
   loading: "eager" | "lazy";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -63,7 +64,7 @@ function ProductCard({
         <Image
           src={product.image}
           alt={product.name}
-          title={`${product.name} – distributed by Excellentia Foods`}
+          title={`${product.name} – ${titleSuffix}`}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
@@ -81,7 +82,11 @@ function ProductCard({
   );
 }
 
-export default function BestSellers() {
+export default function BestSellers({ dict }: { dict: Dictionary }) {
+  const products: Product[] = dict.bestSellers.products.map((name, index) => ({
+    name,
+    ...media[index],
+  }));
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
@@ -124,10 +129,10 @@ export default function BestSellers() {
     <section className="w-full bg-white pt-16 text-default-navy ">
       <div className="flex flex-col items-start px-6 font-bold sm:flex-row sm:items-end sm:justify-between sm:px-10 lg:px-16">
         <h2 className="font-support2 text-2xl sm:text-3xl lg:text-4xl">
-          Request Wholesale Catalog & Price List
+          {dict.bestSellers.heading}
         </h2>
         <p className="mt-6 inline-flex items-center gap-2 font-support2 text-default-navy transition-all hover:cursor-pointer hover:gap-3">
-          See All Products
+          {dict.bestSellers.seeAll}
           <span aria-hidden="true">→</span>
         </p>
       </div>
@@ -146,6 +151,7 @@ export default function BestSellers() {
             <ProductCard
               key={product.name}
               product={product}
+              titleSuffix={dict.common.productTitleSuffix}
               loading={index === 0 ? "eager" : "lazy"}
             />
           ))}

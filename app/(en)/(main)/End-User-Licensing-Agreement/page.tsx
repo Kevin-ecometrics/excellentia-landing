@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "@/app/site-url";
+import { alternatesFor } from "@/app/root-shell";
 
+// Documento de la aplicacion interna de QuickBooks: solo existe en ingles.
 export const metadata: Metadata = {
-  alternates: {
-    canonical: absoluteUrl("/End-User-Licensing-Agreement/"),
-  },
+  alternates: alternatesFor("en", "/End-User-Licensing-Agreement/", false),
 };
 
 export default function Eula() {

@@ -3,8 +3,15 @@
 import Image from "next/image";
 import axios from "axios";
 import { useState } from "react";
+import { localizedPath, type Dictionary, type Locale } from "@/app/i18n";
 
-export default function Footer() {
+export default function Footer({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+}) {
   const [email, setEmail] = useState("");
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");
@@ -16,20 +23,17 @@ export default function Footer() {
       setPending(true);
       setMessage("");
 
-      const { data } = await axios.post(
-        "https://excellentiafoods.com/send-email",
-        {
-          email,
-        },
-      );
+      // El backend enruta a hola@ o hello@ segun este idioma.
+      await axios.post("https://excellentiafoods.com/send-email", {
+        email,
+        locale,
+      });
 
-      console.log(data);
-
-      setMessage("Thank you! We'll contact you soon.");
+      setMessage(dict.footer.success);
       setEmail("");
     } catch (error) {
       console.error(error);
-      setMessage("Something went wrong. Please try again.");
+      setMessage(dict.footer.error);
     } finally {
       setPending(false);
     }
@@ -43,13 +47,13 @@ export default function Footer() {
       <div className="relative flex w-full flex-col items-start gap-8 sm:flex-row sm:justify-between">
         <div className="w-full sm:max-w-lg">
           <h3 className="font-support2 text-2xl font-bold sm:text-3xl">
-            Request wholesale catalog and price list!
+            {dict.footer.ctaHeading}
           </h3>
           <form onSubmit={handleSubmit} className="mt-6">
             <div className="flex items-center gap-4 border-b border-default-ivory/30 pb-3">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={dict.footer.emailPlaceholder}
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -57,7 +61,11 @@ export default function Footer() {
                 className="w-full bg-transparent"
               />
 
-              <button type="submit" disabled={pending}>
+              <button
+                type="submit"
+                disabled={pending}
+                aria-label={dict.footer.submitLabel}
+              >
                 {pending ? "···" : "→"}
               </button>
             </div>
@@ -67,11 +75,11 @@ export default function Footer() {
         </div>
 
         <nav className="hidden flex-none flex-col items-end gap-2 font-support2 text-base font-bold sm:flex">
-          <a href="/" className="hover:underline">
-            Home
+          <a href={localizedPath(locale, "/")} className="hover:underline">
+            {dict.nav.home}
           </a>
           <span aria-disabled="true" className="cursor-pointer hover:underline">
-            About
+            {dict.nav.about}
           </span>
           <a
             href="#contact"
@@ -83,7 +91,7 @@ export default function Footer() {
             }}
             className="hover:underline"
           >
-            Contact
+            {dict.nav.contact}
           </a>
         </nav>
       </div>
@@ -91,7 +99,7 @@ export default function Footer() {
       <div className="relative flex w-full flex-col items-start gap-8 sm:flex-row sm:justify-between sm:gap-12">
         <div className="flex flex-col gap-3 font-support2 text-base text-default-ivory/80 sm:max-w-lg sm:text-lg">
           <h4 className="text-xl font-bold text-default-ivory sm:text-2xl">
-            Contact Info
+            {dict.footer.contactHeading}
           </h4>
           <address className="flex flex-col gap-3 not-italic">
             <div className="flex items-start gap-3">
@@ -107,10 +115,7 @@ export default function Footer() {
                 <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg>
-              <span>
-                2323 Avenida Costa Este Suite 100, San Diego, CA 92154, United
-                States
-              </span>
+              <span>{dict.footer.address}</span>
             </div>
             <div className="flex items-center gap-3">
               <svg
@@ -158,15 +163,15 @@ export default function Footer() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            title="Excellentia Foods location"
+            title={dict.footer.mapTitle}
           ></iframe>
         </div>
       </div>
       <div className="flex flex-1 items-center justify-center">
         <Image
           src="/logos/LOGO LETRAS EXCELLENTIA.png"
-          alt="Excellentia Foods logo"
-          title="Excellentia Foods – Wholesale Hispanic Food Distributor"
+          alt={dict.common.logoAlt}
+          title={dict.common.logoTitle}
           width={400}
           height={400}
           className="h-auto w-full object-contain max-w-7xl"
@@ -176,63 +181,69 @@ export default function Footer() {
       <div className="relative flex w-full flex-col gap-2 text-sm text-default-ivory/70">
         <div className="flex w-full justify-between sm:hidden">
           <nav className="flex flex-col items-start gap-2 font-support2 text-base font-bold text-default-ivory">
-            <a href="/" className="hover:underline">
-              Home
+            <a href={localizedPath(locale, "/")} className="hover:underline">
+              {dict.nav.home}
             </a>
             <span
               aria-disabled="true"
               className="cursor-pointer hover:underline"
             >
-              About
+              {dict.nav.about}
             </span>
             <a href="#contact" className="hover:underline">
-              Contact
+              {dict.nav.contact}
             </a>
           </nav>
           <div className="flex flex-col items-start gap-2">
             <a
-              href="/terms-and-conditions"
+              href={localizedPath(locale, "/terms-and-conditions/")}
               className="underline-offset-2 hover:underline"
             >
-              Terms &amp; Conditions
+              {dict.nav.terms}
             </a>
             <a
-              href="/End-User-Licensing-Agreement"
+              href="/End-User-Licensing-Agreement/"
               className="underline-offset-2 hover:underline"
+              hrefLang="en"
             >
-              End-User Licensing Agreement
+              {dict.nav.eula}
             </a>
             <a
-              href="/privacy-policy"
+              href="/privacy-policy/"
               className="underline-offset-2 hover:underline"
+              hrefLang="en"
             >
-              Privacy Policy
+              {dict.nav.privacy}
             </a>
           </div>
         </div>
 
         <div className="hidden justify-start gap-4 sm:flex">
           <a
-            href="/terms-and-conditions/"
+            href={localizedPath(locale, "/terms-and-conditions/")}
             className="underline-offset-2 hover:underline"
           >
-            Terms &amp; Conditions
+            {dict.nav.terms}
           </a>
           <a
             href="/End-User-Licensing-Agreement/"
             className="underline-offset-2 hover:underline"
+            hrefLang="en"
           >
-            End-User Licensing Agreement
+            {dict.nav.eula}
           </a>
           <a
             href="/privacy-policy/"
             className="underline-offset-2 hover:underline"
+            hrefLang="en"
           >
-            Privacy Policy
+            {dict.nav.privacy}
           </a>
         </div>
         <div className="border-t border-default-ivory/20 pt-2 text-center sm:text-left">
-          <span>&copy; {new Date().getFullYear()} Excellentia Foods LLC</span>
+          <span>
+            &copy; {new Date().getFullYear()} {dict.footer.copyright}
+          </span>
         </div>
       </div>
     </footer>

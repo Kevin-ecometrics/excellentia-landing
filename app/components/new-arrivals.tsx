@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { animate, motion, useMotionValue, type PanInfo } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import type { Dictionary } from "@/app/i18n";
 
 type Product = {
   name: string;
@@ -10,21 +11,19 @@ type Product = {
   video: string;
 };
 
-const products: Product[] = [
+// Los nombres viven en el diccionario, en el mismo orden que estos assets.
+const media = [
   {
-    name: "Tio Francisco Queso Oaxaca",
     image:
       "/products/Excellentia foods distributes tio francisco queso oaxaca.png",
     video: "/products/queso oaxaca.mp4",
   },
   {
-    name: "Reynaldo's Rice Pudding",
     image:
       "/products/Excellentia foods distributes the authentic rice pudding from reynaldos.webp",
     video: "/products/Arroz con leche.mp4",
   },
   {
-    name: "El Campestre Salsa Roja",
     image:
       "/products/Excellentia foods distributes the best salsa el camprestre salsa roja.webp",
     video: "/products/Salsa.mp4",
@@ -33,9 +32,11 @@ const products: Product[] = [
 
 function ProductCard({
   product,
+  titleSuffix,
   loading,
 }: {
   product: Product;
+  titleSuffix: string;
   loading: "eager" | "lazy";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -64,7 +65,7 @@ function ProductCard({
         <Image
           src={product.image}
           alt={product.name}
-          title={`${product.name} – distributed by Excellentia Foods`}
+          title={`${product.name} – ${titleSuffix}`}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
@@ -82,7 +83,11 @@ function ProductCard({
   );
 }
 
-export default function NewArrivals() {
+export default function NewArrivals({ dict }: { dict: Dictionary }) {
+  const products: Product[] = dict.newArrivals.products.map((name, index) => ({
+    name,
+    ...media[index],
+  }));
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
@@ -147,6 +152,7 @@ export default function NewArrivals() {
             <ProductCard
               key={product.name}
               product={product}
+              titleSuffix={dict.common.productTitleSuffix}
               loading={index === 0 ? "eager" : "lazy"}
             />
           ))}

@@ -1,14 +1,21 @@
 import Image from "next/image";
-import Link from "next/link";
+import { localizedPath, type Dictionary, type Locale } from "@/app/i18n";
 
-export default function NotFound() {
+/** Pagina 404, compartida por ambos idiomas. */
+export default function NotFoundContent({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+}) {
   return (
     <main className="flex flex-1 flex-col bg-default-teal">
       <div className="flex flex-1 flex-col items-center justify-center px-6">
         <Image
           src="/logos/V1/LOGO EXCELLENTIA SIN FONDO.png"
-          alt="Excellentia Foods logo"
-          title="Excellentia Foods – Wholesale Hispanic Food Distributor"
+          alt={dict.common.logoAlt}
+          title={dict.common.logoTitle}
           width={320}
           height={320}
           priority
@@ -18,39 +25,41 @@ export default function NotFound() {
           404
         </h1>
         <p className="mt-2 text-lg text-default-ivory/80 sm:text-xl font-support2">
-          Page not found
+          {dict.notFound.title}
         </p>
-        <Link
-          href="/"
+        <a
+          href={localizedPath(locale, "/")}
           className="mt-8 rounded-full bg-default-ivory px-8 py-3 font-support2 text-base font-bold text-default-teal transition-transform hover:scale-105"
         >
-          Return to home page
-        </Link>
+          {dict.notFound.cta}
+        </a>
       </div>
 
       <div className="flex flex-col items-center gap-3 px-6 pb-8 text-sm text-default-ivory/70">
         <div className="flex flex-wrap font-support2 justify-center gap-x-4 gap-y-1">
           <a
-            href="/terms-and-conditions"
+            href={localizedPath(locale, "/terms-and-conditions/")}
             className="underline-offset-2 hover:underline"
           >
-            Terms &amp; Conditions
+            {dict.nav.terms}
           </a>
           <a
-            href="/End-User-Licensing-Agreement"
+            href="/End-User-Licensing-Agreement/"
+            hrefLang="en"
             className="underline-offset-2 hover:underline"
           >
-            EULA
+            {dict.nav.eulaShort}
           </a>
           <a
-            href="/privacy-policy"
+            href="/privacy-policy/"
+            hrefLang="en"
             className="underline-offset-2 hover:underline"
           >
-            Privacy Policy
+            {dict.nav.privacy}
           </a>
         </div>
         <div className="border-t border-default-ivory/20 pt-3 text-center font-support2">
-          &copy; {new Date().getFullYear()} Excellentia Foods LLC
+          &copy; {new Date().getFullYear()} {dict.footer.copyright}
         </div>
       </div>
     </main>

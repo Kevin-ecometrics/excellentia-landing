@@ -2,55 +2,44 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import type { Dictionary } from "@/app/i18n";
 
 type FaqItem = {
   question: string;
   answer: React.ReactNode;
 };
 
-const faqs: FaqItem[] = [
-  {
-    question: "Why Partner with Excellentia Foods?",
-    answer: (
-      <>
-        We don&apos;t just drop off pallets; we manage your inventory&apos;s
-        success with:
-        <ul className="mt-3 list-disc space-y-1.5 pl-5">
-          <li>Direct Store Delivery (DSD)</li>
-          <li>Refrigerated Merchandising &amp; Placement</li>
-          <li>Strict FIFO Product Rotation</li>
-          <li>In-Store Product Demonstrations</li>
-          <li>Exclusive Hispanic Products</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    question: "What kind of products does Excellentia Foods Offer?",
-    answer: (
-      <div className="space-y-3 max-w-5xl">
-        <p>
-          From easy-crumble queso fresco and meltable queso Oaxaca to queso
-          cotija and traditional queso panela, shredded mozarella, monterey
-          jack, cheddar, and more
-        </p>
-        <p>
-          <strong className="font-bold">Creams &amp; Cremas:</strong> Rich,
-          velvety crema mexicana and crema centroamericana designed for
-          traditional dishes, milk, yogurts
-        </p>
-        <p>
-          <strong className="font-bold">Premium Cold Cuts &amp; Meats:</strong>{" "}
-          Traditional chorizos, longaniza, sausages, chicharron, bacon
-        </p>
-        <p>
-          <strong className="font-bold">More:</strong> Salsas, beef seasoning,
-          adobo, mole paste, flan napolitano, tamales, rice puddings, and more
-        </p>
-      </div>
-    ),
-  },
-];
+function buildFaqs(dict: Dictionary): FaqItem[] {
+  return [
+    {
+      question: dict.faq.partner.question,
+      answer: (
+        <>
+          {dict.faq.partner.intro}
+          <ul className="mt-3 list-disc space-y-1.5 pl-5">
+            {dict.faq.partner.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </>
+      ),
+    },
+    {
+      question: dict.faq.products.question,
+      answer: (
+        <div className="space-y-3 max-w-5xl">
+          <p>{dict.faq.products.intro}</p>
+          {dict.faq.products.sections.map((section) => (
+            <p key={section.label}>
+              <strong className="font-bold">{section.label}</strong>
+              {section.text}
+            </p>
+          ))}
+        </div>
+      ),
+    },
+  ];
+}
 
 function FaqRow({
   faq,
@@ -105,14 +94,15 @@ function FaqRow({
   );
 }
 
-export default function Faq() {
+export default function Faq({ dict }: { dict: Dictionary }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const faqs = buildFaqs(dict);
 
   return (
     <section className="w-full bg-default-ivory px-6 py-24 text-default-navy sm:px-10 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="font-support1 text-4xl sm:text-5xl lg:text-6xl">
-          Frequently Asked Questions
+          {dict.faq.heading}
         </h2>
         <div className="mt-12 divide-y divide-default-navy/20 border-t border-default-navy/20">
           {faqs.map((faq, index) => (
