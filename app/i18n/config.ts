@@ -9,7 +9,11 @@ export const defaultLocale: Locale = "en";
 // Rutas traducidas. Privacy Policy y el EULA existen solo en ingles (son
 // documentos de la aplicacion interna de QuickBooks), asi que desde /es se
 // enlazan a la version en ingles.
-export const localizedRoutes = ["/", "/terms-and-conditions/"] as const;
+export const localizedRoutes = [
+  "/",
+  "/about/",
+  "/terms-and-conditions/",
+] as const;
 
 export function hasTranslation(path: string) {
   return (localizedRoutes as readonly string[]).includes(path);

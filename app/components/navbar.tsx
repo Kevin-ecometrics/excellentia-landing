@@ -61,9 +61,9 @@ export default function Navbar({
           <a href={localizedPath(locale, "/")} className="hover:underline">
             {dict.nav.home}
           </a>
-          <span aria-disabled="true" className="cursor-pointer hover:underline">
+          <a href={localizedPath(locale, "/about/")} className="hover:underline">
             {dict.nav.about}
-          </span>
+          </a>
           <a
             href="#contact"
             onClick={(e) => {

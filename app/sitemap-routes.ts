@@ -19,6 +19,7 @@ export type SitemapRoute = {
 // private, admin, auth, or utility routes.
 const canonicalRoutes: Omit<SitemapRoute, "alternates">[] = [
   { path: "/", changefreq: "monthly", priority: "1.0" },
+  { path: "/about/", changefreq: "monthly", priority: "0.8" },
   { path: "/privacy-policy/", changefreq: "yearly", priority: "0.3" },
   { path: "/terms-and-conditions/", changefreq: "yearly", priority: "0.3" },
   {
