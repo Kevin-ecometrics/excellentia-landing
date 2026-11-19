@@ -9,6 +9,8 @@ type Product = {
   name: string;
   image: string;
   video: string;
+  alt: string;
+  videoTitle: string;
 };
 
 // Los nombres viven en el diccionario, en el mismo orden que estos assets.
@@ -16,27 +18,25 @@ const media = [
   {
     image:
       "/products/Excellentia foods distributes queso fresco from tio francisco.webp",
-    video: "/products/queso fresco.mp4",
+    video: "/products/stock up on premium queso fresco through excellentia foods.mp4",
   },
   {
     image:
-      "/products/Excellentia foods distributes  reynaldos beef chorizo.png",
-    video: "/products/chorizo.mp4",
+      "/products/Excellentia foods distributes reynaldos beef chorizo.png",
+    video: "/products/Stock up on authentic chorizo from reynaldos by excellentia foods.mp4",
   },
   {
     image:
-      "/products/Excellentia foods distributes  flan napolitano from juan j.webp",
-    video: "/products/Flan.mp4",
+      "/products/Excellentia foods distributes flan napolitano from juan j.webp",
+    video: "/products/Your go to source for juan's flan Excellentia Foods.mp4",
   },
 ];
 
 function ProductCard({
   product,
-  titleSuffix,
   loading,
 }: {
   product: Product;
-  titleSuffix: string;
   loading: "eager" | "lazy";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,6 +56,7 @@ function ProductCard({
         <video
           ref={videoRef}
           src={product.video}
+          title={product.videoTitle}
           muted
           loop
           playsInline
@@ -64,8 +65,8 @@ function ProductCard({
         />
         <Image
           src={product.image}
-          alt={product.name}
-          title={`${product.name} – ${titleSuffix}`}
+          alt={product.alt}
+          title={product.alt}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
@@ -85,7 +86,7 @@ function ProductCard({
 
 export default function TypesOfProducts({ dict }: { dict: Dictionary }) {
   const products: Product[] = dict.typesOfProducts.products.map(
-    (name, index) => ({ name, ...media[index] }),
+    (name, index) => ({ name, ...media[index], ...dict.typesOfProducts.media[index] }),
   );
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -142,7 +143,6 @@ export default function TypesOfProducts({ dict }: { dict: Dictionary }) {
             <ProductCard
               key={product.name}
               product={product}
-              titleSuffix={dict.common.productTitleSuffix}
               loading={index === 0 ? "eager" : "lazy"}
             />
           ))}

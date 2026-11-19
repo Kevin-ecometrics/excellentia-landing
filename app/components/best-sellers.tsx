@@ -9,6 +9,8 @@ type Product = {
   name: string;
   image: string;
   video: string;
+  alt: string;
+  videoTitle: string;
 };
 
 // Los nombres viven en el diccionario, en el mismo orden que estos assets.
@@ -16,26 +18,24 @@ const media = [
   {
     image:
       "/products/Reynaldos premium pork cured longaniza sausage distributed by excellentia foods.png",
-    video: "/products/Longaniza de puerco.mp4",
+    video: "/products/get authentic Reynaldo's longaniza through excellentia foods.mp4",
   },
   {
     image:
       "/products/Excellentia foods distributes excelsior cotija cheese.png",
-    video: "/products/Queso cotija.mp4",
+    video: "/products/authentic queso cotija proudly distributed by excellentia foods.mp4",
   },
   {
     image: "/products/Excellentia foods distributes juquilita mole paste.webp",
-    video: "/products/Mole video.mp4",
+    video: "/products/traditional taste of mole paste available at excellentia foods.mp4",
   },
 ];
 
 function ProductCard({
   product,
-  titleSuffix,
   loading,
 }: {
   product: Product;
-  titleSuffix: string;
   loading: "eager" | "lazy";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -55,6 +55,7 @@ function ProductCard({
         <video
           ref={videoRef}
           src={product.video}
+          title={product.videoTitle}
           muted
           loop
           playsInline
@@ -63,8 +64,8 @@ function ProductCard({
         />
         <Image
           src={product.image}
-          alt={product.name}
-          title={`${product.name} – ${titleSuffix}`}
+          alt={product.alt}
+          title={product.alt}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
@@ -86,6 +87,7 @@ export default function BestSellers({ dict }: { dict: Dictionary }) {
   const products: Product[] = dict.bestSellers.products.map((name, index) => ({
     name,
     ...media[index],
+    ...dict.bestSellers.media[index],
   }));
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -151,7 +153,6 @@ export default function BestSellers({ dict }: { dict: Dictionary }) {
             <ProductCard
               key={product.name}
               product={product}
-              titleSuffix={dict.common.productTitleSuffix}
               loading={index === 0 ? "eager" : "lazy"}
             />
           ))}

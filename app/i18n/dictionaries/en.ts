@@ -1,8 +1,8 @@
 export const en = {
   meta: {
-    title: "Excellentia Foods LLC | Hispanic Cheeses & Cold Cuts distributor ",
+    title: "Excellentia Foods | Wholesale Latino Food Distributor",
     description:
-      "Fastest delivery in Southern California, providing the freshest and most authentic Hispanic foods with full service inventory management.",
+      "Your trusted wholesale distributor for authentic Latino foods. Get fast delivery & full-service inventory management on cheeses, chorizo, adobos, and more",
     keywords: [
       "Hispanic food distributor",
       "bulk Mexican cheese supplier",
@@ -18,7 +18,6 @@ export const en = {
   common: {
     logoAlt: "Excellentia Foods logo",
     logoTitle: "Excellentia Foods – Wholesale Hispanic Food Distributor",
-    productTitleSuffix: "distributed by Excellentia Foods",
   },
 
   nav: {
@@ -36,10 +35,32 @@ export const en = {
 
   hero: {
     title:
-      "Excellentia Foods: The Bridge to Authentic Hispanic Flavors in Southern California",
+      "Excellentia Foods: The Bridge to Latino Flavors in Southern California",
     subtitle:
-      "Wholesale Hispanic Food Distributor: Premium Cheeses, Cold Cuts, & DSD Merchandising Streamline your dairy and deli aisles with Excellentia Foods",
+      "Stock Your Shelves with Authentic Latino Staples",
     cta: "Join Today",
+  },
+
+  catalogReveal: {
+    body: "Fast wholesale delivery of Latino and American foods.",
+    cta: "Contact Us",
+    mailSubject: "Wholesale Catalog & Price List Request",
+  },
+
+  palletBanner: {
+    heading: "Build Your Pallet. Keep Your Business Moving.",
+    body: "Stock your store, mini-market, or restaurant with the exact products you need so you never face empty shelves or take a dish off the menu.",
+    cta: "Build Your Order",
+    imageAlts: [
+      "Contact Excellentia Foods to place your order for Latino and American cheeses, and cold line",
+      "Excellentia Foods stocks your store, mini-market, and restaurant with authentic Latino staples",
+      "Excellentia Foods delivers the freshest Latino ingredients the very same day",
+    ],
+    milestones: [
+      { value: "1", label: "You Call" },
+      { value: "2", label: "We Stock" },
+      { value: "3", label: "We Deliver" },
+    ],
   },
 
   bestSellers: {
@@ -49,6 +70,20 @@ export const en = {
       "Reynaldo's Premium Cured Pork Longaniza Sausage",
       "Excelsior Cotija Cheese",
       "Juquilita Mole Paste",
+    ],
+    media: [
+      {
+        alt: "Excellentia Foods distributes Reynaldos pork cured longaniza with a coarser grind and traditional spices.",
+        videoTitle: "Get authentic taste of longaniza meat from Reynaldo's through Excellentia Foods",
+      },
+      {
+        alt: "Excelsior Cotija cheese with an intense aroma and salty flavor is distributed by Excellentia Foods",
+        videoTitle: "Discover authentic queso cotija, proudly distributed by Excellentia Foods.",
+      },
+      {
+        alt: "Juquilita Mole paste with rich blends of roasted chilies, nuts, and chocolate is distributed by Excellentia Foods",
+        videoTitle: "Experience the traditional taste of mole paste available at Excellentia Foods.",
+      },
     ],
   },
 
@@ -66,6 +101,20 @@ export const en = {
       "Reynaldo's Rice Pudding",
       "El Campestre Salsa Roja",
     ],
+    media: [
+      {
+        alt: "Oaxaca white cheese with light buttery finish and a hint of salt is distributed by Excellentia Foods",
+        videoTitle: "Elevate your cheese selection with authentic queso Oaxaca from Excellentia Foods",
+      },
+      {
+        alt: "Reynaldos rice pudding made with soft rice, whole milk and cinnamon is distributed by Excellentia Foods",
+        videoTitle: "Discover the best arroz con leche from Reynaldos in Excellentia Foods",
+      },
+      {
+        alt: "Salsa roja El Campestre made with green tomatillo, red chili de arbol, garlic and spices is distributed by Excellentia Foods",
+        videoTitle: "Discover authentic, bold salsas, proudly distributed by Excellentia Foods.",
+      },
+    ],
   },
 
   videoBanner: {
@@ -76,7 +125,67 @@ export const en = {
   },
 
   typesOfProducts: {
-    products: ["Cheese", "Cold Cuts", "More"],
+    products: ["Cheese", "Cold Line", "More"],
+    media: [
+      {
+        alt: "Queso fresco with a soft texture from Tio Francisco is distributed by Excellentia Foods",
+        videoTitle: "Stock up on premium queso fresco for your store or kitchen through Excellentia Foods.",
+      },
+      {
+        alt: "Reynaldos beef chorizo with smoky spices is distributed by Excellentia Foods",
+        videoTitle: "Stock up on authentic chorizo from Reynaldos proudly distributed by Excellentia Foods",
+      },
+      {
+        alt: "The best flan napolitano from Juan J's made with real milk and caramel syrup is distributed by Excellentia Foods",
+        videoTitle: "Your go-to source for Juan's classic flan: Excellentia Foods.",
+      },
+    ],
+  },
+
+  productCredits: {
+    heading: "Our Products",
+    groups: [
+      {
+        title: "Cheeses",
+        items: [
+          { name: "Queso Fresco" },
+          { name: "Cotija" },
+          { name: "Panela" },
+          { name: "Oaxaca" },
+          { name: "Mozzarella" },
+          { name: "Requesón" },
+          { name: "Monterey Jack" },
+        ],
+      },
+      {
+        title: "Dairy products",
+        items: [
+          { name: "Yogurt" },
+          { name: "Milk" },
+          { name: "Sour Cream" },
+          { name: "Strawberry & Chocolate Milk" },
+        ],
+      },
+      {
+        title: "Cold line",
+        items: [
+          { name: "Pork Rinds", note: "Chicharrón" },
+          { name: "Pork Chops", note: "Chuleta" },
+          { name: "Ham" },
+          { name: "Soy Chorizo" },
+        ],
+      },
+      {
+        title: "More",
+        items: [
+          { name: "Gelatin Desserts", note: "Gelatinas" },
+          { name: "Fruit Paste", note: "Ate" },
+          { name: "Pickled Carrots", note: "Zanahorias curtidas" },
+          { name: "Pickled Pork Skin", note: "Cueritos" },
+          { name: "Batter Mix", note: "Capeador" },
+        ],
+      },
+    ],
   },
 
   difference: {
@@ -118,7 +227,7 @@ export const en = {
   legacyBanner: {
     heading:
       "Excellentia Foods is a family-owned business with a decade of growth; with every delivery, we fulfill our promise of excellence, quality, and freshness.",
-    body: "We are committed to providing every customer and the community with products that connect them to their Hispanic roots.",
+    body: "We are committed to providing every customer and the community with products that connect them to their roots.",
   },
 
   faq: {
@@ -137,20 +246,22 @@ export const en = {
     },
     products: {
       question: "What kind of products does Excellentia Foods Offer?",
-      intro:
-        "From easy-crumble queso fresco and meltable queso Oaxaca to queso cotija and traditional queso panela, shredded mozarella, monterey jack, cheddar, and more",
       sections: [
         {
-          label: "Creams & Cremas:",
-          text: " Rich, velvety crema mexicana and crema centroamericana designed for traditional dishes, milk, yogurts",
+          label: "Cheeses:",
+          text: " From easy-crumble queso fresco and meltable queso Oaxaca to queso cotija and traditional queso panela, shredded mozarella, monterey jack, cheddar, and more",
         },
         {
-          label: "Premium Cold Cuts & Meats:",
+          label: "Dairy products:",
+          text: " Rich, velvety crema mexicana and crema centroamericana designed for traditional dishes, milk, and yogurts.",
+        },
+        {
+          label: "Cold line:",
           text: " Traditional chorizos, longaniza, sausages, chicharron, bacon",
         },
         {
           label: "More:",
-          text: " Salsas, beef seasoning, adobo, mole paste, flan napolitano, tamales, rice puddings, and more",
+          text: " Salsas, beef seasoning, adobos, mole paste, flan napolitano, tamales, rice puddings, and more.",
         },
       ],
     },
@@ -175,10 +286,11 @@ export const en = {
   },
 
   about: {
+    videoTitle: "We are Excellentia Foods, your partner for authentic Latino staples in San Diego",
     meta: {
-      title: "About Us | Excellentia Foods LLC",
+      title: "About Excellentia Foods | Latino Food Distributor in San Diego",
       description:
-        "From one family's passion for mole and chorizo in 2003 to a premier Hispanic food distributor in Southern California. This is the Excellentia Foods story.",
+        "For over 10 years, we've supplied Southern California grocers and restaurants with fresh, authentic Mexican & Latino American staples. Discover our story.",
     },
     hero: {
       eyebrow: "About Us",
@@ -194,15 +306,15 @@ export const en = {
       milestones: [
         {
           year: "2003" as string | null,
-          body: "Every great flavor has a history. For Excellentia Foods, the journey began in 2003, when Mr. Mario set out with a simple, passionate mission: to share the authentic tastes of home. Armed with traditional Oaxacan-style mole paste and artisanal Mexican and Salvadoran chorizos, he laid the foundation for what would become a lasting family legacy in Southern California.",
+          body: "Every great flavor has a history. For Excellentia Foods, the journey began in 2003, when Mr. Mario Ortiz spent years helping build some of the most recognizable Latino food brands in San Diego. Armed with traditional Oaxacan-style mole paste and artisanal Mexican and Salvadoran chorizos, he laid the foundation for what would become a lasting family legacy in Southern California, built entirely around quality, trust, and real relationships. That's how Excellentia was born.",
         },
         {
           year: "2016" as string | null,
-          body: "By 2016, that foundational passion evolved into the official launch of Excellentia Foods LLC. Recognizing a growing need for authentic, high-quality ingredients, we partnered with premier suppliers like Quesos Tío Francisco to bring the finest Hispanic dairy and cheeses directly to the Southern California market.",
+          body: "By 2016, that foundational passion evolved into the official launch of Excellentia Foods LLC. Recognizing a growing need for authentic, high-quality ingredients, we partnered with premier suppliers to bring the finest Latino and American dairy and cheeses directly to the Southern California market.",
         },
         {
           year: "Today" as string | null,
-          body: "Today, Excellentia Foods has grown into a trusted premier distributor. We proudly collaborate with a diverse network of exceptional brands and food suppliers, serving as the bridge between heritage-rich ingredients.",
+          body: "Today, Excellentia Foods has grown into a trusted wholesale distributor. We proudly collaborate with a diverse network of exceptional brands and food suppliers, serving as the bridge between heritage-rich ingredients.",
         },
         {
           year: null as string | null,
@@ -216,7 +328,7 @@ export const en = {
     },
     mission: {
       label: "Our mission",
-      body: "Excellentia Foods drives business growth by distributing high-quality Hispanic products backed by reliable, flexible, and on-time service. We are dedicated to cultivating genuine, lasting connections — from the suppliers who craft our products to the clients who serve them.",
+      body: "Excellentia Foods drives business growth by distributing high-quality Latino products backed by reliable, flexible, and on-time service. We are dedicated to cultivating genuine, lasting connections — from the suppliers who craft our products to the clients who serve them.",
     },
     vision: {
       label: "Our vision",

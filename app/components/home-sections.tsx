@@ -1,4 +1,6 @@
 import Hero from "@/app/components/hero";
+import CatalogReveal from "@/app/components/catalog-reveal";
+import PalletBanner from "@/app/components/pallet-banner";
 import BestSellers from "@/app/components/best-sellers";
 import BenefitsBanner from "@/app/components/benefits-banner";
 import NewArrivals from "@/app/components/new-arrivals";
@@ -14,7 +16,9 @@ export default function HomeSections({ dict }: { dict: Dictionary }) {
   return (
     <main className="flex flex-1 flex-col bg-white">
       <Hero dict={dict} />
+      <CatalogReveal dict={dict} />
       <BestSellers dict={dict} />
+      <PalletBanner dict={dict} />
       <BenefitsBanner dict={dict} />
       <NewArrivals dict={dict} />
       <VideoBanner dict={dict} />

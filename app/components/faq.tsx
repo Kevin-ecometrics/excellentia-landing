@@ -28,7 +28,6 @@ function buildFaqs(dict: Dictionary): FaqItem[] {
       question: dict.faq.products.question,
       answer: (
         <div className="space-y-3 max-w-5xl">
-          <p>{dict.faq.products.intro}</p>
           {dict.faq.products.sections.map((section) => (
             <p key={section.label}>
               <strong className="font-bold">{section.label}</strong>

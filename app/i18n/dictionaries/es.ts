@@ -3,9 +3,9 @@ import type { Dictionary } from "./en";
 export const es: Dictionary = {
   meta: {
     title:
-      "Excellentia Foods LLC | Distribuidor mayorista de quesos y embutidos hispanos",
+      "Excellentia Foods | Distribuidor mayorista de alimentos latinos",
     description:
-      "La entrega más rápida del sur de California: los alimentos hispanos más frescos y auténticos, con manejo integral de inventario.",
+      "Tu distribuidor mayorista de confianza de alimentos latinos auténticos. Entrega rápida y manejo integral de inventario en quesos, chorizo, adobos y más",
     keywords: [
       "distribuidor de alimentos hispanos",
       "proveedor mayorista de queso mexicano",
@@ -22,7 +22,6 @@ export const es: Dictionary = {
     logoAlt: "Logo de Excellentia Foods",
     logoTitle:
       "Excellentia Foods – Distribuidor mayorista de alimentos hispanos",
-    productTitleSuffix: "distribuido por Excellentia Foods",
   },
 
   nav: {
@@ -40,10 +39,32 @@ export const es: Dictionary = {
 
   hero: {
     title:
-      "Excellentia Foods: el puente hacia los auténticos sabores hispanos en el sur de California",
+      "Excellentia Foods: el puente hacia los sabores latinos en el sur de California",
     subtitle:
-      "Distribuidor mayorista de alimentos hispanos: quesos premium, embutidos y surtido DSD. Optimiza tus pasillos de lácteos y deli con Excellentia Foods",
+      "Surte tus anaqueles con auténticos productos latinos esenciales",
     cta: "Únete hoy",
+  },
+
+  catalogReveal: {
+    body: "Entrega mayorista rápida de alimentos latinos y americanos.",
+    cta: "Contáctanos",
+    mailSubject: "Solicitud de catálogo mayorista y lista de precios",
+  },
+
+  palletBanner: {
+    heading: "Arma tu pallet. Mantén tu negocio en movimiento.",
+    body: "Surte tu tienda, minisúper o restaurante con los productos exactos que necesitas para que nunca tengas anaqueles vacíos ni tengas que quitar un platillo del menú.",
+    cta: "Arma tu pedido",
+    imageAlts: [
+      "Contacta a Excellentia Foods para hacer tu pedido de quesos latinos y americanos, y línea fría",
+      "Excellentia Foods surte tu tienda, minisúper y restaurante con productos latinos auténticos",
+      "Excellentia Foods entrega los ingredientes latinos más frescos el mismo día",
+    ],
+    milestones: [
+      { value: "1", label: "Tú llamas" },
+      { value: "2", label: "Nosotros surtimos" },
+      { value: "3", label: "Nosotros entregamos" },
+    ],
   },
 
   bestSellers: {
@@ -53,6 +74,20 @@ export const es: Dictionary = {
       "Longaniza de cerdo curada premium Reynaldo's",
       "Queso Cotija Excelsior",
       "Pasta de mole Juquilita",
+    ],
+    media: [
+      {
+        alt: "Excellentia Foods distribuye la longaniza de cerdo curada Reynaldos, de molido grueso y especias tradicionales.",
+        videoTitle: "Disfruta el auténtico sabor de la longaniza de Reynaldo's a través de Excellentia Foods",
+      },
+      {
+        alt: "El queso Cotija Excelsior, de aroma intenso y sabor salado, es distribuido por Excellentia Foods",
+        videoTitle: "Descubre el auténtico queso cotija, distribuido con orgullo por Excellentia Foods.",
+      },
+      {
+        alt: "La pasta de mole Juquilita, con una rica mezcla de chiles tostados, nueces y chocolate, es distribuida por Excellentia Foods",
+        videoTitle: "Disfruta el sabor tradicional de la pasta de mole disponible en Excellentia Foods.",
+      },
     ],
   },
 
@@ -70,6 +105,20 @@ export const es: Dictionary = {
       "Arroz con leche Reynaldo's",
       "Salsa Roja El Campestre",
     ],
+    media: [
+      {
+        alt: "El queso Oaxaca blanco, de final ligeramente mantecoso y un toque de sal, es distribuido por Excellentia Foods",
+        videoTitle: "Mejora tu selección de quesos con auténtico queso Oaxaca de Excellentia Foods",
+      },
+      {
+        alt: "El arroz con leche Reynaldos, hecho con arroz suave, leche entera y canela, es distribuido por Excellentia Foods",
+        videoTitle: "Descubre el mejor arroz con leche de Reynaldos en Excellentia Foods",
+      },
+      {
+        alt: "La salsa roja El Campestre, hecha con tomatillo verde, chile de árbol, ajo y especias, es distribuida por Excellentia Foods",
+        videoTitle: "Descubre salsas auténticas y llenas de sabor, distribuidas con orgullo por Excellentia Foods.",
+      },
+    ],
   },
 
   videoBanner: {
@@ -81,7 +130,67 @@ export const es: Dictionary = {
   },
 
   typesOfProducts: {
-    products: ["Quesos", "Embutidos", "Más"],
+    products: ["Quesos", "Línea fría", "Más"],
+    media: [
+      {
+        alt: "El queso fresco de textura suave de Tío Francisco es distribuido por Excellentia Foods",
+        videoTitle: "Surte queso fresco premium para tu tienda o cocina a través de Excellentia Foods.",
+      },
+      {
+        alt: "El chorizo de res Reynaldos, con especias ahumadas, es distribuido por Excellentia Foods",
+        videoTitle: "Surte auténtico chorizo de Reynaldos, distribuido con orgullo por Excellentia Foods",
+      },
+      {
+        alt: "El mejor flan napolitano de Juan J's, hecho con leche de verdad y jarabe de caramelo, es distribuido por Excellentia Foods",
+        videoTitle: "Tu fuente de confianza para el clásico flan de Juan: Excellentia Foods.",
+      },
+    ],
+  },
+
+  productCredits: {
+    heading: "Nuestros productos",
+    groups: [
+      {
+        title: "Quesos",
+        items: [
+          { name: "Queso fresco" },
+          { name: "Cotija" },
+          { name: "Panela" },
+          { name: "Oaxaca" },
+          { name: "Mozzarella" },
+          { name: "Requesón" },
+          { name: "Monterey Jack" },
+        ],
+      },
+      {
+        title: "Lácteos",
+        items: [
+          { name: "Yogur" },
+          { name: "Leche" },
+          { name: "Crema ácida" },
+          { name: "Leche de fresa y de chocolate" },
+        ],
+      },
+      {
+        title: "Línea fría",
+        items: [
+          { name: "Chicharrón" },
+          { name: "Chuleta" },
+          { name: "Jamón" },
+          { name: "Chorizo de soya" },
+        ],
+      },
+      {
+        title: "Más",
+        items: [
+          { name: "Gelatinas" },
+          { name: "Ate" },
+          { name: "Zanahorias curtidas" },
+          { name: "Cueritos" },
+          { name: "Capeador" },
+        ],
+      },
+    ],
   },
 
   difference: {
@@ -123,7 +232,7 @@ export const es: Dictionary = {
   legacyBanner: {
     heading:
       "Excellentia Foods es una empresa familiar con una década de crecimiento; en cada entrega cumplimos nuestra promesa de excelencia, calidad y frescura.",
-    body: "Nos comprometemos a ofrecer a cada cliente y a la comunidad productos que los conecten con sus raíces hispanas.",
+    body: "Nos comprometemos a ofrecer a cada cliente y a la comunidad productos que los conecten con sus raíces.",
   },
 
   faq: {
@@ -142,20 +251,22 @@ export const es: Dictionary = {
     },
     products: {
       question: "¿Qué tipo de productos ofrece Excellentia Foods?",
-      intro:
-        "Desde queso fresco fácil de desmoronar y queso Oaxaca que funde perfecto, hasta queso cotija y panela tradicional, mozzarella rallada, monterey jack, cheddar y más",
       sections: [
         {
-          label: "Cremas:",
-          text: " Crema mexicana y crema centroamericana, densas y aterciopeladas, pensadas para platillos tradicionales, además de leches y yogures",
+          label: "Quesos:",
+          text: " Desde queso fresco fácil de desmoronar y queso Oaxaca que funde perfecto, hasta queso cotija y panela tradicional, mozzarella rallada, monterey jack, cheddar y más",
         },
         {
-          label: "Embutidos y carnes premium:",
+          label: "Lácteos:",
+          text: " Crema mexicana y crema centroamericana, densas y aterciopeladas, pensadas para platillos tradicionales, además de leches y yogures.",
+        },
+        {
+          label: "Línea fría:",
           text: " Chorizos tradicionales, longaniza, salchichas, chicharrón y tocino",
         },
         {
           label: "Más:",
-          text: " Salsas, sazonador para carne, adobo, pasta de mole, flan napolitano, tamales, arroz con leche y más",
+          text: " Salsas, sazonador para carne, adobos, pasta de mole, flan napolitano, tamales, arroz con leche y más.",
         },
       ],
     },
@@ -180,10 +291,11 @@ export const es: Dictionary = {
   },
 
   about: {
+    videoTitle: "Somos Excellentia Foods, tu aliado en productos latinos auténticos en San Diego",
     meta: {
-      title: "Nosotros | Excellentia Foods LLC",
+      title: "Nosotros: Excellentia Foods | Distribuidor de alimentos latinos en San Diego",
       description:
-        "De la pasión de una familia por el mole y el chorizo en 2003 a un distribuidor líder de alimentos hispanos en el sur de California. Esta es la historia de Excellentia Foods.",
+        "Por más de 10 años hemos surtido a tiendas y restaurantes del sur de California con productos mexicanos y latinoamericanos frescos y auténticos. Conoce nuestra historia.",
     },
     hero: {
       eyebrow: "Nosotros",
@@ -197,15 +309,15 @@ export const es: Dictionary = {
       milestones: [
         {
           year: "2003",
-          body: "Todo gran sabor tiene una historia. Para Excellentia Foods, el camino comenzó en 2003, cuando el señor Mario emprendió una misión sencilla y apasionada: compartir los sabores auténticos de casa. Con pasta de mole estilo oaxaqueño y chorizos artesanales mexicanos y salvadoreños, sentó las bases de lo que se convertiría en un legado familiar duradero en el sur de California.",
+          body: "Todo gran sabor tiene una historia. Para Excellentia Foods, el camino comenzó en 2003, cuando el señor Mario Ortiz pasó años ayudando a construir algunas de las marcas de alimentos latinos más reconocidas de San Diego. Con pasta de mole estilo oaxaqueño y chorizos artesanales mexicanos y salvadoreños, sentó las bases de lo que se convertiría en un legado familiar duradero en el sur de California, construido por completo sobre la calidad, la confianza y las relaciones genuinas. Así nació Excellentia.",
         },
         {
           year: "2016",
-          body: "Para 2016, esa pasión fundacional se transformó en el lanzamiento oficial de Excellentia Foods LLC. Al reconocer la creciente necesidad de ingredientes auténticos y de alta calidad, nos aliamos con proveedores de primer nivel como Quesos Tío Francisco para llevar los mejores lácteos y quesos hispanos directamente al mercado del sur de California.",
+          body: "Para 2016, esa pasión fundacional se transformó en el lanzamiento oficial de Excellentia Foods LLC. Al reconocer la creciente necesidad de ingredientes auténticos y de alta calidad, nos aliamos con proveedores de primer nivel para llevar los mejores lácteos y quesos latinos y americanos directamente al mercado del sur de California.",
         },
         {
           year: "Hoy",
-          body: "Hoy, Excellentia Foods se ha consolidado como un distribuidor de confianza. Colaboramos con una red diversa de marcas y proveedores excepcionales, y servimos como el puente hacia ingredientes con raíces y tradición.",
+          body: "Hoy, Excellentia Foods se ha consolidado como un distribuidor mayorista de confianza. Colaboramos con una red diversa de marcas y proveedores excepcionales, y servimos como el puente hacia ingredientes con raíces y tradición.",
         },
         {
           year: null,
@@ -219,7 +331,7 @@ export const es: Dictionary = {
     },
     mission: {
       label: "Nuestra misión",
-      body: "Excellentia Foods impulsa el crecimiento de tu negocio distribuyendo productos hispanos de alta calidad, respaldados por un servicio confiable, flexible y puntual. Nos dedicamos a cultivar conexiones genuinas y duraderas, desde los proveedores que elaboran nuestros productos hasta los clientes que los ofrecen.",
+      body: "Excellentia Foods impulsa el crecimiento de tu negocio distribuyendo productos latinos de alta calidad, respaldados por un servicio confiable, flexible y puntual. Nos dedicamos a cultivar conexiones genuinas y duraderas, desde los proveedores que elaboran nuestros productos hasta los clientes que los ofrecen.",
     },
     vision: {
       label: "Nuestra visión",

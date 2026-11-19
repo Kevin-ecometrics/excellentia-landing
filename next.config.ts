@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Solo afecta `next dev`: permite probar desde otros dispositivos de la red local.
+  // Sin esto Next bloquea su JS de desarrollo y la pagina carga sin animaciones.
+  allowedDevOrigins: ["192.168.0.162"],
   trailingSlash: true,
   output: "export",
   images: {

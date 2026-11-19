@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 /backend
+
+# Videos sin uso en ninguna pagina (ver BACKLOG.md); no subirlos al repo.
+/public/videos/warehouse website vide.webm
+/public/videos/services excellentia video website.webm

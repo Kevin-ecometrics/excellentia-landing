@@ -9,6 +9,8 @@ type Product = {
   name: string;
   image: string;
   video: string;
+  alt: string;
+  videoTitle: string;
 };
 
 // Los nombres viven en el diccionario, en el mismo orden que estos assets.
@@ -16,27 +18,25 @@ const media = [
   {
     image:
       "/products/Excellentia foods distributes tio francisco queso oaxaca.png",
-    video: "/products/queso oaxaca.mp4",
+    video: "/products/Elevate your cheese selection with authentic queso oaxaca from excellentia foods.mp4",
   },
   {
     image:
       "/products/Excellentia foods distributes the authentic rice pudding from reynaldos.webp",
-    video: "/products/Arroz con leche.mp4",
+    video: "/products/Find the best arroz con leche from reynaldos in excellentia foods.mp4",
   },
   {
     image:
       "/products/Excellentia foods distributes the best salsa el camprestre salsa roja.webp",
-    video: "/products/Salsa.mp4",
+    video: "/products/discover authentic salsas, distributed by excellentia foods.mp4",
   },
 ];
 
 function ProductCard({
   product,
-  titleSuffix,
   loading,
 }: {
   product: Product;
-  titleSuffix: string;
   loading: "eager" | "lazy";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,6 +56,7 @@ function ProductCard({
         <video
           ref={videoRef}
           src={product.video}
+          title={product.videoTitle}
           muted
           loop
           playsInline
@@ -64,8 +65,8 @@ function ProductCard({
         />
         <Image
           src={product.image}
-          alt={product.name}
-          title={`${product.name} – ${titleSuffix}`}
+          alt={product.alt}
+          title={product.alt}
           fill
           draggable={false}
           onDragStart={(e) => e.preventDefault()}
@@ -87,6 +88,7 @@ export default function NewArrivals({ dict }: { dict: Dictionary }) {
   const products: Product[] = dict.newArrivals.products.map((name, index) => ({
     name,
     ...media[index],
+    ...dict.newArrivals.media[index],
   }));
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -152,7 +154,6 @@ export default function NewArrivals({ dict }: { dict: Dictionary }) {
             <ProductCard
               key={product.name}
               product={product}
-              titleSuffix={dict.common.productTitleSuffix}
               loading={index === 0 ? "eager" : "lazy"}
             />
           ))}
