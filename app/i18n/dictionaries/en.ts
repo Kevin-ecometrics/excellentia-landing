@@ -23,6 +23,7 @@ export const en = {
   nav: {
     home: "Home",
     about: "About",
+    progress: "Progress",
     contact: "Contact",
     terms: "Terms & Conditions",
     eula: "End-User Licensing Agreement",
@@ -44,6 +45,7 @@ export const en = {
   catalogReveal: {
     body: "Fast wholesale delivery of Latino and American foods.",
     cta: "Contact Us",
+    skip: "Skip to contact",
     mailSubject: "Wholesale Catalog & Price List Request",
   },
 
@@ -274,8 +276,11 @@ export const en = {
     success: "Thank you! We'll contact you soon.",
     error: "Something went wrong. Please try again.",
     contactHeading: "Contact Info",
+    warehouseLabel: "Warehouse",
     address:
       "2323 Avenida Costa Este Suite 100, San Diego, CA 92154, United States",
+    officeLabel: "Office",
+    officeAddress: "2308 Avenida Costa Este, San Diego, CA 92154, United States",
     mapTitle: "Excellentia Foods location",
     copyright: "Excellentia Foods LLC",
   },
@@ -371,6 +376,24 @@ export const en = {
           body: "Advanced inventory control ensures our authentic Hispanic cheeses and premium cold cuts are always sold at optimal freshness.",
         },
       ],
+    },
+  },
+
+  progress: {
+    warehouseVideo: {
+      title: "Inside the Excellentia Foods warehouse in San Diego",
+      soundOn: "Turn on sound",
+      soundOff: "Mute",
+    },
+    meta: {
+      title: "Our Progress | Excellentia Foods",
+      description:
+        "Follow how Excellentia Foods keeps growing to bring authentic Latino staples to Southern California.",
+    },
+    hero: {
+      title: "Our Progress",
+      subtitle: "Growing with every delivery, every partner and every shelf we stock.",
+      scrollLabel: "Scroll to see our progress",
     },
   },
 

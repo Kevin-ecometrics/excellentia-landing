@@ -48,4 +48,3 @@ Terms & Conditions, Privacy Policy y EULA: aplicar su documento cuando exista.
 No se usan en ninguna página: decidir si se borran o a qué página pertenecen. Están en `.gitignore` para no subirlos al repo (47 MB); si se usan en una página, quitar su línea de `.gitignore`.
 
 - `public/videos/services excellentia video website.webm`
-- `public/videos/warehouse website vide.webm`

@@ -27,6 +27,7 @@ export const es: Dictionary = {
   nav: {
     home: "Inicio",
     about: "Nosotros",
+    progress: "Progreso",
     contact: "Contacto",
     terms: "Términos y Condiciones",
     eula: "Contrato de Licencia de Usuario Final",
@@ -48,6 +49,7 @@ export const es: Dictionary = {
   catalogReveal: {
     body: "Entrega mayorista rápida de alimentos latinos y americanos.",
     cta: "Contáctanos",
+    skip: "Saltar a contacto",
     mailSubject: "Solicitud de catálogo mayorista y lista de precios",
   },
 
@@ -279,8 +281,12 @@ export const es: Dictionary = {
     success: "¡Gracias! Te contactaremos pronto.",
     error: "Algo salió mal. Inténtalo de nuevo.",
     contactHeading: "Datos de contacto",
+    warehouseLabel: "Almacén",
     address:
       "2323 Avenida Costa Este Suite 100, San Diego, CA 92154, Estados Unidos",
+    officeLabel: "Oficina",
+    officeAddress:
+      "2308 Avenida Costa Este, San Diego, CA 92154, Estados Unidos",
     mapTitle: "Ubicación de Excellentia Foods",
     copyright: "Excellentia Foods LLC",
   },
@@ -373,6 +379,24 @@ export const es: Dictionary = {
           body: "Un control de inventario avanzado garantiza que nuestros quesos hispanos auténticos y embutidos premium siempre se vendan en su punto óptimo de frescura.",
         },
       ],
+    },
+  },
+
+  progress: {
+    warehouseVideo: {
+      title: "Dentro del almacén de Excellentia Foods en San Diego",
+      soundOn: "Activar sonido",
+      soundOff: "Silenciar",
+    },
+    meta: {
+      title: "Nuestro progreso | Excellentia Foods",
+      description:
+        "Conoce cómo Excellentia Foods sigue creciendo para llevar productos latinos auténticos al sur de California.",
+    },
+    hero: {
+      title: "Nuestro progreso",
+      subtitle: "Creciendo con cada entrega, cada socio y cada anaquel que surtimos.",
+      scrollLabel: "Desliza para ver nuestro progreso",
     },
   },
 

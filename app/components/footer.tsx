@@ -102,21 +102,42 @@ export default function Footer({
             {dict.footer.contactHeading}
           </h4>
           <address className="flex flex-col gap-3 not-italic">
-            <div className="flex items-start gap-3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mt-0.5 h-5 w-5 flex-none text-default-ivory"
-              >
-                <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-              <span>{dict.footer.address}</span>
-            </div>
+            {[
+              [
+                dict.footer.officeLabel,
+                dict.footer.officeAddress,
+                "https://maps.app.goo.gl/xf2FEAhDGwMYwN76A",
+              ],
+              [
+                dict.footer.warehouseLabel,
+                dict.footer.address,
+                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dict.footer.address)}`,
+              ],
+            ].map(([label, address, href]) => (
+              <div key={label} className="flex items-start gap-3">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-0.5 h-5 w-5 flex-none text-default-ivory"
+                >
+                  <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  <strong className="text-default-ivory">{label}:</strong>{" "}
+                  {address}
+                </a>
+              </div>
+            ))}
             <div className="flex items-center gap-3">
               <svg
                 viewBox="0 0 24 24"
@@ -157,7 +178,7 @@ export default function Footer({
 
         <div className="w-full flex-1 overflow-hidden rounded-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!4v1785182700807!6m8!1m7!1sb9z-f65QTxOvLjI1RRgLFg!2m2!1d32.55503864185368!2d-116.9524382733506!3f240.81628!4f0!5f0.7820865974627469"
+            src="https://www.google.com/maps/embed?pb=!4v1785182700807!6m8!1m7!1sW7mWdGGbQl_JLxeImwSafg!2m2!1d32.5553007!2d-116.9550961!3f113.72!4f0!5f0.7820865974627469"
             className="h-[300px] w-full sm:h-[350px]"
             style={{ border: 0 }}
             allowFullScreen
