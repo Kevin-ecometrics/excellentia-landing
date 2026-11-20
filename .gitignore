@@ -44,3 +44,5 @@ next-env.d.ts
 
 # Videos sin uso en ninguna pagina (ver BACKLOG.md); no subirlos al repo.
 /public/videos/services excellentia video website.webm
+
+backend.js

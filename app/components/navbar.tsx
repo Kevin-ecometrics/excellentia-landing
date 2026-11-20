@@ -67,16 +67,7 @@ export default function Navbar({
           <a href={localizedPath(locale, "/progress/")} className="hover:underline">
             {dict.nav.progress}
           </a>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="hover:underline"
-          >
+          <a href={localizedPath(locale, "/contact/")} className="hover:underline">
             {dict.nav.contact}
           </a>
         </nav>

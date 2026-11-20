@@ -382,11 +382,67 @@ export const es: Dictionary = {
     },
   },
 
+  contact: {
+    meta: {
+      title: "Contacto: Excellentia Foods | Distribuidor de alimentos latinos en San Diego",
+      description:
+        "Llama, escribe o visita a Excellentia Foods en San Diego. Solicita nuestro catálogo mayorista y lista de precios de productos latinos auténticos.",
+    },
+    hero: {
+      eyebrow: "Contacto",
+      title: "Surtamos juntos tus anaqueles",
+      subtitle:
+        "Cuéntanos sobre tu tienda, minisúper o restaurante y nuestro equipo te enviará el catálogo y los precios.",
+    },
+    infoHeading: "Contáctanos directamente",
+    phoneLabel: "Teléfono",
+    emailLabel: "Correo",
+    form: {
+      heading: "Envíanos un mensaje",
+      name: "Nombre",
+      business: "Nombre del negocio",
+      phone: "Teléfono",
+      email: "Correo",
+      message: "Mensaje",
+      submit: "Enviar mensaje",
+      sending: "Enviando...",
+      success: "¡Gracias! Tu mensaje se envió. Te contactaremos pronto.",
+      error: "Algo salió mal. Inténtalo de nuevo o llámanos.",
+    },
+  },
+
   progress: {
     warehouseVideo: {
       title: "Dentro del almacén de Excellentia Foods en San Diego",
       soundOn: "Activar sonido",
       soundOff: "Silenciar",
+    },
+    route: {
+      heading: "De nuestro almacén a tu anaquel",
+      intro:
+        "Cada pedido sigue la misma ruta. Así tus productos latinos llegan fríos, frescos y listos para vender.",
+      stops: [
+        {
+          title: "Haces tu pedido",
+          body: "Llámanos o arma tu pallet con los quesos, cremas, línea fría y productos especiales que necesita tu tienda, minisúper o restaurante.",
+          points: ["Quesos, lácteos y línea fría", "Productos hispanos exclusivos"],
+          imageAlt: "Contacta a Excellentia Foods para hacer tu pedido de productos latinos",
+        },
+        {
+          title: "Lo preparamos en San Diego",
+          body: "Nuestro equipo surte tu pedido en nuestro almacén de San Diego con rotación primero en entrar, primero en salir, para que el producto más antiguo nunca llegue a tu refrigerador.",
+          points: ["Rotación FIFO estricta", "Almacén en San Diego"],
+          imageAlt: "Excellentia Foods prepara pallets de productos latinos en su almacén de San Diego",
+        },
+        {
+          title: "Lo entregamos y surtimos tus anaqueles",
+          body: "La entrega directa en tienda (DSD) lleva tu pedido hasta tus pasillos, no a un andén de carga. Surtimos tus anaqueles refrigerados y hacemos demostraciones en tienda que atraen clientes al pasillo.",
+          points: ["Entrega directa en tienda (DSD)", "Surtido de anaqueles refrigerados", "Demostraciones de producto en tienda"],
+          imageAlt: "Excellentia Foods entrega los ingredientes latinos más frescos y surte tus anaqueles refrigerados",
+        },
+      ],
+      ctaHeading: "¿Listo para surtir tus anaqueles?",
+      cta: "Arma tu pedido",
     },
     meta: {
       title: "Nuestro progreso | Excellentia Foods",

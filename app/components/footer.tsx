@@ -81,16 +81,7 @@ export default function Footer({
           <a href={localizedPath(locale, "/about/")} className="hover:underline">
             {dict.nav.about}
           </a>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="hover:underline"
-          >
+          <a href={localizedPath(locale, "/contact/")} className="hover:underline">
             {dict.nav.contact}
           </a>
         </nav>
@@ -211,7 +202,7 @@ export default function Footer({
             >
               {dict.nav.about}
             </span>
-            <a href="#contact" className="hover:underline">
+            <a href={localizedPath(locale, "/contact/")} className="hover:underline">
               {dict.nav.contact}
             </a>
           </nav>

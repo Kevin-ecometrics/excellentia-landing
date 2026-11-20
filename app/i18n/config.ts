@@ -12,6 +12,7 @@ export const defaultLocale: Locale = "en";
 export const localizedRoutes = [
   "/",
   "/about/",
+  "/contact/",
   "/terms-and-conditions/",
 ] as const;
 

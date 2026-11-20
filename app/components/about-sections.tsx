@@ -13,10 +13,10 @@ export default function AboutSections({ dict }: { dict: Dictionary }) {
     <main className="flex flex-1 flex-col bg-white">
       <AboutHero dict={dict} />
       <AboutStory dict={dict} />
+      <AboutVideo title={dict.about.videoTitle} />
       <AboutPromise dict={dict} />
       <AboutMissionVision dict={dict} />
       <AboutValues dict={dict} />
-      <AboutVideo title={dict.about.videoTitle} />
       <AboutDifference dict={dict} />
     </main>
   );

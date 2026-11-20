@@ -379,11 +379,67 @@ export const en = {
     },
   },
 
+  contact: {
+    meta: {
+      title: "Contact Excellentia Foods | Latino Food Distributor in San Diego",
+      description:
+        "Call, email or visit Excellentia Foods in San Diego. Request our wholesale catalog and price list for authentic Latino staples.",
+    },
+    hero: {
+      eyebrow: "Contact",
+      title: "Let's stock your shelves together",
+      subtitle:
+        "Tell us about your store, mini-market or restaurant and our team will get back to you with our catalog and prices.",
+    },
+    infoHeading: "Reach us directly",
+    phoneLabel: "Phone",
+    emailLabel: "Email",
+    form: {
+      heading: "Send us a message",
+      name: "Name",
+      business: "Business name",
+      phone: "Phone",
+      email: "Email",
+      message: "Message",
+      submit: "Send message",
+      sending: "Sending...",
+      success: "Thank you! Your message was sent. We'll contact you soon.",
+      error: "Something went wrong. Please try again or call us.",
+    },
+  },
+
   progress: {
     warehouseVideo: {
       title: "Inside the Excellentia Foods warehouse in San Diego",
       soundOn: "Turn on sound",
       soundOff: "Mute",
+    },
+    route: {
+      heading: "From our warehouse to your shelf",
+      intro:
+        "Every order follows the same route. This is how your Latino staples stay cold, fresh and ready to sell.",
+      stops: [
+        {
+          title: "You place your order",
+          body: "Call us or build your pallet with the cheeses, creams, cold line and specialty products your store, mini-market or restaurant needs.",
+          points: ["Cheeses, dairy and cold line", "Exclusive Hispanic products"],
+          imageAlt: "Contact Excellentia Foods to place your order of Latino staples",
+        },
+        {
+          title: "We prepare it in San Diego",
+          body: "Our team picks your order at our San Diego warehouse, rotating stock first in, first out, so the oldest product never reaches your cooler.",
+          points: ["Strict FIFO rotation", "San Diego warehouse"],
+          imageAlt: "Excellentia Foods prepares pallets of Latino products at its San Diego warehouse",
+        },
+        {
+          title: "We deliver and stock your shelves",
+          body: "Direct Store Delivery brings your order to your aisles, not to a loading dock. We stock your refrigerated shelves and run in-store demonstrations that bring customers to the aisle.",
+          points: ["Direct Store Delivery (DSD)", "Refrigerated shelf stocking", "In-store product demonstrations"],
+          imageAlt: "Excellentia Foods delivers the freshest Latino ingredients and stocks your refrigerated shelves",
+        },
+      ],
+      ctaHeading: "Ready to stock your shelves?",
+      cta: "Build your order",
     },
     meta: {
       title: "Our Progress | Excellentia Foods",
